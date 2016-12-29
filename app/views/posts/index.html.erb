@@ -1,0 +1,14 @@
+<%= link_to 'Add New Post',new_post_path%><br>
+
+<h2>All Posts</h2>
+<% @posts.each do |post|%>
+<p>
+Title :<%= post.title%><br>
+<p>
+Body :<%= post.body%><br>
+</p>
+<%= link_to 'show',post %> | <%= link_to 'edit',edit_post_path(post) %> | <%= link_to 'delete',post,method: :delete %>
+
+</p>
+
+<%end%>
