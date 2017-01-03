@@ -44,6 +44,11 @@ class PostsController < ApplicationController
 
 	end
 	
+	def tableview
+		
+		@posts = Post.page params[:page]
+
+	end
 	private 
 		def post_params
 		params.require(:post).permit(:title,:body)

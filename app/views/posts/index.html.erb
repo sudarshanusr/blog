@@ -1,5 +1,7 @@
 <%= link_to 'Add New Post',new_post_path%><br>
 
+<%= link_to 'Table view',post_tableview_path%><br>
+
 <h2>All Posts</h2>
 <% @posts.each do |post|%>
 	<p>
