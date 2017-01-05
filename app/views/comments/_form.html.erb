@@ -1,3 +1,4 @@
+<div class="well" tyle="background-color:#f5f5f5;">
 <%= form_for ([@post,@post.comments.build]) do |f|%>
 	<p>
 		<%= f.label 'Name' ,:name%><br>
@@ -12,3 +13,4 @@
 	<%= f.submit 'Submit',class: "btn btn-primary" %>
 
 <%end%>
+</div>
