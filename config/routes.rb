@@ -2,8 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-get 'post/tableview' => 'posts#tableview'
-  
+
   resources :posts do
     resources :comments
   end
