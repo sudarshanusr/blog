@@ -14,8 +14,10 @@ class CommentsController < ApplicationController
 		
 
 		if @comment.save
+			
 		redirect_to @post
 		 else
+		 	
 		 	redirect_to new_post_comment_path
 		 end
 

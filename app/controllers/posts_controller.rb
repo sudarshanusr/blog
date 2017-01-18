@@ -26,8 +26,10 @@ class PostsController < ApplicationController
 	@post=Post.new(post_params)
 
 		if @post.save
+			flash[:success]="Successfully saved"
            redirect_to posts_path
 		else
+			flash[:danger]=@post.errors.full_messages.join(',')
 			redirect_to new_post_path
 
 		end
