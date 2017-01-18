@@ -1,7 +1,8 @@
 class PostsController < ApplicationController
 	
 	def index
-		@posts=Post.all
+		@posts=Post.all.order('created_at DESC')
+
 	end
 
 	def new
@@ -26,12 +27,12 @@ class PostsController < ApplicationController
 	@post=Post.new(post_params)
 
 		if @post.save
-			flash[:success]="Successfully saved"
+			flash[:success]="Successfully post is saved"
            redirect_to posts_path
 		else
-			flash[:danger]=@post.errors.full_messages.join(',')
+          #flash[:error]=@post.errors.full_messages.join(',')  
+           flash[:error]="Post Not Saved"
 			redirect_to new_post_path
-
 		end
 	end
 

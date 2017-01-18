@@ -4,15 +4,14 @@
   <title>Blog</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
 <%= render 'shared/header.html.erb' %>
 <div class="container">
-
- <% flash.each do |key, value| %>
-        <%= content_tag :div,value, class:"alert alert-dismissible alert-#{key}"%>
- <% end %>
+<%= custom_bootstrap_flash %>
+ 
 </div>
 
 

@@ -13,4 +13,6 @@
  *= require_tree .
  *= require_self
  *= require bootstrap.min.css
+ *= require toastr.css
+ *= require font-awesome
  */
