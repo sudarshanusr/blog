@@ -1,0 +1,31 @@
+.row.col-md-10.col-md-offset-1
+  = image_tag "posted_icon.jpeg"
+  %span
+  Posted on #{@post.created_at.strftime("%b %d, %Y")}
+.jumbotron.col-md-10.col-md-offset-1.text-info
+  .row
+    .col-md-12
+      %h2
+        = @post.title
+        %br/
+    .form-group.col-md-12
+      %p
+        %small= @post.body
+  .row
+    .col-md-12
+      .row.col-md-12{:style => "margin: 20px 0;border: 1px solid #e3e3e3;padding: 10px"}
+        %h2 Add Comment
+        = render 'comments/form'
+      %h4
+        Comments :
+        - @post.comments.each do |comment|
+          .row.col-md-12{:style => "margin: 20px 0;border: 1px solid #e3e3e3;padding: 10px"}
+            .row.col-md-6
+              Name :#{comment.name}
+              %br/
+              Body :#{comment.body}
+              %br/
+            .row.col-md-6{:align => "right", :style => "padding: 10px"}
+              = link_to 'delete',[comment.post,comment],method: :delete
+              %br/
+              %br/

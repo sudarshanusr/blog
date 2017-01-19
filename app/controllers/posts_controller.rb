@@ -30,9 +30,10 @@ class PostsController < ApplicationController
 			flash[:success]="Successfully post is saved"
            redirect_to posts_path
 		else
-          #flash[:error]=@post.errors.full_messages.join(',')  
-           flash[:error]="Post Not Saved"
-			redirect_to new_post_path
+          flash[:error]=@post.errors.full_messages.join(',')  
+   #         flash[:error]="Post Not Saved"
+			# redirect_to new_post_path
+	      render :new
 		end
 	end
 
