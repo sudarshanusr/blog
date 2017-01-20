@@ -1,3 +1,4 @@
-= link_to 'Back',posts_path
+= link_to posts_path do
+  %i.fa.fa-home.fa-2x{"aria-hidden" => "true"}
 %h2 Show Post
 = render 'form'

@@ -16,3 +16,10 @@
  *= require toastr.css
  *= require font-awesome
  */
+h1 {
+  font-family: "Roboto Slab";
+ }
+
+body {
+  font-family: 'Roboto'
+}

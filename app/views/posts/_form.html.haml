@@ -1,5 +1,5 @@
 .row.col-md-10.col-md-offset-1
-  = image_tag "posted_icon.jpeg"
+  %i.fa.fa-clock-o{"aria-hidden" =>"true"}
   %span
   Posted on #{@post.created_at.strftime("%b %d, %Y")}
 .jumbotron.col-md-10.col-md-offset-1.text-info
@@ -24,8 +24,11 @@
               Name :#{comment.name}
               %br/
               Body :#{comment.body}
-              %br/
+              %br/  
             .row.col-md-6{:align => "right", :style => "padding: 10px"}
-              = link_to 'delete',[comment.post,comment],method: :delete
+              = link_to [comment.post,comment],method: :delete do
+                %i.fa.fa-minus-square{"aria-hidden" =>"true"}
+                
+              
               %br/
               %br/
