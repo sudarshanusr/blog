@@ -21,5 +21,8 @@ h1 {
  }
 
 body {
-  font-family: 'Roboto'
+  font-family: 'Roboto Slab', 'Roboto';
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
 }
