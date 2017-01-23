@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170123115047) do
+ActiveRecord::Schema.define(version: 20170123205248) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "name"
@@ -31,9 +31,25 @@ ActiveRecord::Schema.define(version: 20170123115047) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "mailers_sent_mails", force: :cascade do |t|
+    t.integer  "mailer_id"
+    t.integer  "sent_mail_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "mailers_sent_mails", ["mailer_id"], name: "index_mailers_sent_mails_on_mailer_id"
+  add_index "mailers_sent_mails", ["sent_mail_id"], name: "index_mailers_sent_mails_on_sent_mail_id"
+
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sent_mails", force: :cascade do |t|
+    t.string   "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

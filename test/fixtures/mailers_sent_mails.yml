@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mailer_id: 
+  sent_mail_id: 
+
+two:
+  mailer_id: 
+  sent_mail_id: 
