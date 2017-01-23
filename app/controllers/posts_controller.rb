@@ -48,6 +48,10 @@ class PostsController < ApplicationController
 		redirect_to posts_path
 
 	end
+	def mailerlist
+		@mailers=Mailer.all.order('created_at DESC')
+
+	end
 	
 	
 	private 
