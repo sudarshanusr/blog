@@ -12,11 +12,17 @@
 
         %tbody
           - @mailers.each do |mailer|
-            %tr
-              %td 
-                %input{:type => 'checkbox'}
+            %tr   
+              %td
+                %input{:onclick => "check(#{mailer.mobile})",:id => "#{mailer.mobile}" ,:type => "checkbox"}
+
+              
               %td= mailer.name
               %td= mailer.email
               %td= mailer.mobile
-      .col-md-offset-5       
-        %a.btn.btn-primary{:href=> '/sendmail'} Send Email        
+      .col-md-offset-5  
+        %button{:class => "btn btn-primary" ,:onclick => "",:id => "submit", :type => "button"} Send Email
+
+
+
+
