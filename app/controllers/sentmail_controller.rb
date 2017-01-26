@@ -13,7 +13,7 @@ class SentmailController < ApplicationController
             
             @mailer1.sent_mail_ids+=[sentmail.id]
             @mailer1.save
-            binding.pry
+            
 ApplicationMailer.welcome_email(@mailer1).deliver
           end
 
