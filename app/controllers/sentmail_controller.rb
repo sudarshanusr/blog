@@ -3,28 +3,24 @@ class SentmailController < ApplicationController
 	
 	def addtextmessage
 
-	
+			#creating sentmail 
+	        sentmail=SentMail.new
+	        sentmail.message="bbbb"
+	        sentmail.save
+		  #iterating the params ids to sent mails individually
 		  params[:ids].each do |mailer|
             @mailer1=Mailer.find(mailer)
-            
-            sentmail=SentMail.new
-            sentmail.message="bbbb"
-            sentmail.save
-            
             @mailer1.sent_mail_ids+=[sentmail.id]
             @mailer1.save
-            
-ApplicationMailer.welcome_email(@mailer1).deliver
+            #triggering mailer
+			ApplicationMailer.welcome_email(@mailer1).deliver
+			flash[:success]="Email Sent Successfully"
           end
-
-
     end
+
+
     def mail
 
-    	#params[:ids].each do |mailer|
-         # @mailer1=Mailer.find(mailer)
-         # ApplicationMailer.welcome_email(@mailer1.email,@mailer1.name).deliver
-         #end
 
     end
 
