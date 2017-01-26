@@ -21,7 +21,8 @@
               %td= mailer.email
               %td= mailer.mobile
       .col-md-offset-5  
-        %button{:class => "btn btn-primary" ,:onclick => "send()",:id => "submit", :type => "button", :id =>"my_link"} Send Email
+        %button{:class => "btn btn-primary" ,:onclick => "send()",:id => "submit", :type => "button", :id =>"my_link" ,:remote =>false} Send Email
+        = link_to 'Send Email', sentmail_path(:ids => "ids")
         
 
 
