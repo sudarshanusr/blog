@@ -28,7 +28,16 @@ function send(){
 $.ajax({
     type:'GET', 
     url: '/sentmail', 
-    data: { ids: ids} 
+    data: { ids: ids} ,
+    success:function(data){
+    console.log("Success" +data);
+  },
+    error:function(data){
+console.log("ERROR" +data);
+    }
+
+
+    
   });
 
 }

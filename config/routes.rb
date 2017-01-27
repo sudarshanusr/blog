@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   root 'posts#index'
   get 'mailers' => 'posts#mailerlist'
   get 'sentmail' => 'sentmail#addtextmessage'
-  # The priority is based upon order of creation: first created -> highest priority.
+  get  'mail'  =>'sentmail#mail'
+  get  'email'  =>'sentmail#email'
+    # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
