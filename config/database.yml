@@ -32,4 +32,9 @@ test:
   password:
   port: 5432
 
+production:
+  <<: *default
+  database: my_test_app_production
+  username: my_test_app
+  password: <%= ENV['MY_TEST_APP_DATABASE_PASSWORD'] %>
 
