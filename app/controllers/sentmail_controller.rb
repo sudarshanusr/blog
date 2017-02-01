@@ -27,5 +27,12 @@ class SentmailController < ApplicationController
 
     end
 
+    def createmailer
+    @mailer1=Mailer.new
+    response.should _render_template(:file => "#{Rails.root}/views/sentmail/createmailer.html")
+
+    end
+
+
 
 end

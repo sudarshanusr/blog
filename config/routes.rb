@@ -6,12 +6,14 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
+  resources :mailers
 
   root 'posts#index'
-  get 'mailers' => 'posts#mailerlist'
+  get 'mailerslist' => 'posts#mailerlist'
   get 'sentmail' => 'sentmail#addtextmessage'
   get  'mail'  =>'sentmail#mail'
   get  'email'  =>'sentmail#email'
+  get  'createmailer'  =>'sentmail#createmailer'
     # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

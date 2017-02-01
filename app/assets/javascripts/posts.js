@@ -41,3 +41,22 @@ console.log("ERROR" +data);
   });
 
 }
+function newmailer(){
+  
+
+$.ajax({
+    type:'GET', 
+    url: '/mailers/new', 
+    
+    success:function(data){
+    console.log("Success" +data);
+  },
+    error:function(data){
+console.log("ERROR" +data);
+    }
+
+
+    
+  });
+
+}
