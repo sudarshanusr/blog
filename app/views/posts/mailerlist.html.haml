@@ -1,6 +1,7 @@
 %h2.col-md-offset-5 MailersList
 .row
   .container.col-md-6.col-md-offset-3
+    %button{:class => "btn btn-primary" ,:onclick => "send()",:id => "submit", :type => "button", :id =>"my_link" ,:remote =>false} Tag
     .well
       %table.table.table-strped.table-hover
         %thead
