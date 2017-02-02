@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :mailers
+  resources :tags
 
   root 'posts#index'
   get 'mailerslist' => 'posts#mailerlist'
