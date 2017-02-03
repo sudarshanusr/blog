@@ -1,11 +1,19 @@
 class TagsController < ApplicationController
 	def new
+		
+		@@ids=params[:ids]
 	@tag=Tag.new
+	
+
 		
 	end
 
 	def create
 	@tag=Tag.new(post_params)
+
+	@tag.mailer_ids=@@ids;
+
+	
 
 		if @tag.save
 			flash[:success]="Successfully tag is saved"

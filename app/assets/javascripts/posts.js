@@ -60,5 +60,24 @@ console.log("ERROR" +data);
   });
 
 }
+function tag(){
+  console.log("tag ids : ");
+  console.log(ids);
+  
 
+$.ajax({
+    type:'GET', 
+    url: '/tags/new', 
+    data: { ids: ids} ,
+    success:function(data){
+    console.log("Success" +data);
+  },
+    error:function(data){
+console.log("ERROR" +data);
+    }
+
+
+    
+  });
+}
 
