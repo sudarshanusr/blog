@@ -2,6 +2,9 @@ class TagsController < ApplicationController
 	def new
 		
 		@@ids=params[:ids]
+
+		@hh=params[:ids]
+
 	@tag=Tag.new
 	
 
@@ -9,9 +12,12 @@ class TagsController < ApplicationController
 	end
 
 	def create
+		binding.pry
 	@tag=Tag.new(post_params)
 
-	@tag.mailer_ids=@@ids;
+	#@tag.mailer_ids=@@ids
+
+	@tag.mailer_ids=params[:tag][:ids]
 
 	
 
