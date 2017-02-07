@@ -3,6 +3,12 @@ class TagsController < ApplicationController
 	 @tag=Tag.new
 	end
 
+	def index
+		
+		@tags=Tag.all
+	end
+
+
 	def create
 		@tag=Tag.new(post_params)	
 	    email_ids = params[:tag][:ids].last
@@ -16,6 +22,9 @@ class TagsController < ApplicationController
 	      flash[:error]=@tag.errors.full_messages.join(',')  
 	      render :new
 		end
+	end
+	def show
+		@tag=Tag.find(params[:id])
 	end
 
 	private 

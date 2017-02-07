@@ -17,7 +17,7 @@ function check(i){
 }
 $(document).ready(function(){
   $("#submit").prop('disabled', true);
-
+ console.log("loaded" );
 
 });
 function send(){
