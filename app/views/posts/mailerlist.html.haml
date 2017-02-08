@@ -21,7 +21,6 @@
               %td= mailer.mobile
               %td=link_to 'Edit', edit_mailer_path(mailer.id) 
       .col-md-offset-5  
-        %button{:class => "btn btn-primary" ,:onclick => "send()",:id => "submit", :type => "button", :id =>"my_link" ,:remote =>false} Send Email
         =link_to 'Create', new_mailer_path
 
           

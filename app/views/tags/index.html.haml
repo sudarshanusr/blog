@@ -1,25 +1,29 @@
 .row
-  .col-md-6.col-md-offset-3
-    %table.table.table-striped.table-hover
-    %h2 All Tags
-    %tbody
-      %tr
-        %td
-          - @tags.each do |tag|
-            %p
-            .panel.panel-primary
-              .panel-heading
-                %h3.panel-title= link_to tag.name,tag_path(tag)
-              %p
-              .panel-body
-                = "asdafs"
-                %br
-            .col-md-6
-              = link_to tag do
-                %i.fa.fa-eye{"aria-hidden" => "true"}
-                |
-              = link_to edit_tag_path(tag) do
-                %i.fa.fa-pencil{"aria-hidden" => "true"}
-                |
-              = link_to tag,method: :delete do
-                %i.fa.fa-trash-o{"aria-hidden" => "true"}
+  .container.col-md-6.col-md-offset-3
+
+    .col-md-6.col-md-offset-3
+      %h2 All Tags
+      .well
+        %table.table.table-striped.table-hover
+        
+        %thead
+          %tr
+            %th #
+            %th Name
+            
+        %tbody
+          %tr
+            %td
+              - @tags.each do |tag|
+                %p
+                %tr   
+                  %td
+                    %input{:onclick => "check(#{tag.id})",:id => "check_#{tag.id}" ,:type => "checkbox"}              
+                  %td= tag.name
+            
+                  %td=link_to 'Edit', edit_tag_path(tag.id)
+
+
+        .col-md-offset-5  
+          %button{:class => "btn btn-primary" ,:onclick => "send()",:id => "submit", :type => "button", :id =>"my_link" ,:remote =>true} Send Email
+          
