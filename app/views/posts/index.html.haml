@@ -11,7 +11,10 @@
       %i.fa.fa-envelope-o{"aria-hidden" => "true"}
       &nbsp;Mailers
     %br/
-    = link_to 'Tags',tags_path 
+    = link_to tags_path do
+      %span
+      %i.fa.fa-tags{"aria-hidden" => "true"}
+      &nbsp;Tags
     %br/
     %table.table.table-striped.table-hover
       %thead

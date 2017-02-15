@@ -19,9 +19,9 @@
               %td= mailer.name
               %td= mailer.email
               %td= mailer.mobile
-              %td=link_to 'Edit', edit_mailer_path(mailer.id) 
+              %td=link_to 'Edit', edit_mailer_path(mailer.id) ,:class => "label label-primary"
       .col-md-offset-5  
-        =link_to 'Create', new_mailer_path
+        =link_to 'Create', new_mailer_path, :class => "btn btn-primary"
 
           
         
