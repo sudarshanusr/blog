@@ -1,5 +1,10 @@
 $(document).ready(function(){
+	$(".sk-fading-circle").hide();
+
+	
  $("#email").click(function(){
+ 	$(".row").hide();
+ 	
  	var msg=$('.message' ).val();
    $.ajax({
     type:'GET', 
@@ -13,6 +18,14 @@ $(document).ready(function(){
 	    }    
   	});
     });
+
+ $(document).ajaxStart(function(){
+    $(".sk-fading-circle").show();
+  });
+ $(document).ajaxStop(function(){
+    $(".sk-fading-circle").hide();
+  });
+
 
 });
 
