@@ -10,6 +10,7 @@ class SentmailController < ApplicationController
     end
      
     def email 
+       
         tag_mailer_id=Array.new
         @@ids.each do |f|
             tag=Tag.find(f)

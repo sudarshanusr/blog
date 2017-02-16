@@ -1,9 +1,15 @@
-.col-md-offset-5
-  %h2 Message
-  %input{:type => 'textarea' ,:class=>'message',:rows =>8}
-  = hidden_field 'ids', :value => params[:ids],:multiple => true
-  %br
-  %button{:class => "btn btn-primary" ,:id => "email", :type => "button", :remote =>false}Email
+.row
+  .container.col-md-6.col-md-offset-3
+    .well
+      .col-md-offset-5
+        %h2 Message
+      
+      %textarea{:rows =>10,:cols=>65,:class=>'message'}
+      %br
+      = hidden_field 'ids', :value => params[:ids],:multiple => true
+      %br
+      .col-md-offset-5
+        %button{:class => "btn btn-primary" ,:id => "email", :type => "button", :remote =>false}Email
  
   
   
