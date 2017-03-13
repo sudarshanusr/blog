@@ -7,6 +7,12 @@
         %span.icon-bar
         %span.icon-bar
       %a.navbar-brand{:href => "/"} Sudarshan's Blog
+      %a.navbar-brand{:href => new_post_path} 
+        %i.fa.fa-plus-square{"aria-hidden" => "true"}Add Post
+      %a.navbar-brand{:href => mailerslist_path}
+        %i.fa.fa-envelope-o{"aria-hidden" => "true"} Mailers
+      %a.navbar-brand{:href => tags_path}
+        %i.fa.fa-tags{"aria-hidden" => "true"} Tags 
     #bs-example-navbar-collapse-2.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         - if user_signed_in?
