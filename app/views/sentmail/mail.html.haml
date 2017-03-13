@@ -12,6 +12,11 @@
   .sk-circle11.sk-circle
   .sk-circle12.sk-circle
 
+= tinymce_assets
+%script{:src => "/assets/tinymce.js", :type => "text/javascript"}
+
+= tinymce
+
 .row
   .container.col-md-6.col-md-offset-3
     
@@ -21,7 +26,7 @@
       .col-md-offset-5
         %h2 Message
       
-      %textarea{:rows =>10,:cols=>65,:class=>'message'}
+      %textarea{:rows =>10,:cols=>65,:class=>'message tinymce'}
       %br
       = hidden_field 'ids', :value => params[:ids],:multiple => true
       %br

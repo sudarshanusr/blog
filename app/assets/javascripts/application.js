@@ -16,3 +16,4 @@
 //= require_tree .
 //= require bootstrap.min.js
 //= require toastr.js
+//= require tinymce-jquery

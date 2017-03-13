@@ -30,6 +30,7 @@ gem 'simple_form'
 gem "haml-rails", "~> 0.9"
 gem 'google-webfonts-rails', '~> 0.0.4'
 gem 'rb-readline'
+gem 'tinymce-rails'
 
 
 # Use ActiveModel has_secure_password
